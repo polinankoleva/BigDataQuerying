@@ -1,0 +1,26 @@
+ex.4
+
+EXECUTION:
+hive -f ex4.sql
+
+ex5.
+
+Paramater named LIMIT has to be passed as input.
+ It contains how many users sorted by popularity are in result.
+
+EXECUTION:
+hive -hiveconf LIMIT=10 -f ex5.sql 
+
+ex6.
+
+Parameter named POST_USER has to be passed as input. 
+This is a user for which the number of posts will be computed.
+
+EXECUTION
+hive -hiveconf POST_USER=<userId> -f ex6.sql
+
+Comparison :
+Hive queries are even easier for writing than Pig queries. It is something 
+which everyone has an experience with after working with databases. It takes less time for writing them
+and I think hive queries are more readable than Pig. 
+The logic of all map/reduce phases is hidden and you don't have to think about them.

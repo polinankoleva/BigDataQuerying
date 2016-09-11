@@ -1,0 +1,54 @@
+EX1 - ex1.pig
+	
+	This program takes three parameters:
+	1) rdfStorageFolder - folder where rdfStorage.jar is placed
+	2) input - input file from where social graph is loaded
+	4) output - folder where the result is written
+	
+	EXECUTION:
+	pig -x local|mapreduce -param input=<input file path> 
+	-param output=<output folder>
+	-param rdfStorageFolder=<rdfStorage.jar folder>  ex1.pig
+	
+EX2 - ex2.pig
+	
+	This program takes four parameters:
+	1) userId - the user for who the program runs
+	2) rdfStorageFolder - folder where rdfStorage.jar is placed
+	3) input - input file from where social graph is loaded
+	4) output - folder where the result is written
+	
+	EXECUTION:
+	pig -x local|mapreduce -param userId=<userId> 
+	-param input=<input file path> 
+	-param output=<output folder>
+	-param rdfStorageFolder=<rdfStorage.jar folder>  ex2.pig 
+	
+EX3 - ex3.pig
+	
+	This program takes four parameters:
+	1) userId - the user for who the program runs
+	2) rdfStorageFolder - folder where rdfStorage.jar is placed
+	3) input - input file from where social graph is loaded
+	4) output - folder where the result is written
+	
+	EXECUTION:
+	pig -x local|mapreduce -param userId=<userId> 
+	-param input=<input file path> 
+	-param output=<output folder>
+	-param rdfStorageFolder=<rdfStorage.jar folder>  ex3.pig 
+	
+EX4 - ex4.pig
+	
+	This program takes four parameters:
+	1) userId - the user for who the program runs
+	2) rdfStorageFolder - folder where rdfStorage.jar is placed
+	3) input - input file from where social graph is loaded
+	4) output - folder where the result is written
+	
+	EXECUTION:
+	pig -x local|mapreduce -param userId=<userId> 
+	-param input=<input file path> 
+	-param output=<output folder>
+	-param rdfStorageFolder=<rdfStorage.jar folder>  ex4.pig 
+	

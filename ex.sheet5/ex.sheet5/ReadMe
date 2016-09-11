@@ -1,0 +1,13 @@
+Task 3 (SixDegreeOfSeperation)
+
+   - It receives five parameters in such order:
+   1) pig mode - "local" or "mapreduce"
+   2) rdf storage path - path to rdf storage jar
+   3) udf path - path to udf jar
+   4) input folder where the initial data can be found - social network graph
+   5) output folder where the result data will be stored 
+
+Jar contains the project is places in target/ex.sheet5-0.1.jar
+   
+    
+   

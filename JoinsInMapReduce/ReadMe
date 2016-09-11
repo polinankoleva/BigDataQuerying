@@ -1,0 +1,47 @@
+Task 1 (OverallNumbersOfPostsPerUser)
+
+   - It receives four parameters in such order:
+   1) input folder where the initial data can be found - social network graph
+   2) temporary folder where the result file of the first task which will be used as a input file of
+ 	the second task will be stored
+   3) output folder where the result data will be stored 
+   4) number of reducers
+   
+   - Execution: hadoop jar joins-mapreduce-1.0.jar 1 <input dir> <temp dir> <output dir> <num of reducers>
+   
+Task 2 (PersonInformationRetrieval)
+
+   - It receives three parameters in such order:
+   1) input folder where the initial data can be found - social network graph
+   2) output folder where the result data will be stored 
+   3) number of reducers
+   
+   - Execution: hadoop jar joins-mapreduce-1.0.jar 2 <input dir> <output dir> <num of reducers>
+   
+Task 3 (GroupPeopleByOrganizationAndYear)
+
+   - It receives four parameters in such order:
+   1) input folder where the initial data can be found - social network graph
+   2) temporary folder where the result file of the first task which will be used as a input file of
+ 	the second task will be stored
+   3) output folder where the result data will be stored 
+   4) number of reducers
+   
+   - Execution: hadoop jar joins-mapreduce-1.0.jar 3 <input dir> <temp dir> <output dir> <num of reducers>
+   
+Task 4 (FoafPathFinder)
+
+   - It receives six parameters in such order:
+   1) a user a searched path will start with
+   2) a user a searched path will end with
+   3) input folder where the initial data can be found - social network graph
+   4) output folder where the result data will be stored 
+   5) output folder where the result data will be stored
+   Because we can have multiple consecutive jobs - each of them uses as an input, 
+   the output of the previous one, we need two output folders
+   which to alternate. For example, outputFolder1 - input of a job/ outputFolder2 - 
+   output of a job and its consecutive job uses outputFolder2 - input/ outputFolder1 - output. 
+   Finally, the result data will be in a file "finalPaths*" in one of the output folders
+   6) number of reducers
+   
+   - Execution: hadoop jar joins-mapreduce-1.0.jar 4 <fromUser> <toUser> <input dir> <output1 dir> <output2 dir> <num of reducers>

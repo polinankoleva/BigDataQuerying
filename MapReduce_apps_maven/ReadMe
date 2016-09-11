@@ -1,0 +1,53 @@
+When the jar is execute, the first parameter should be one of these depending on which map/reduce task is invoked:
+		0 - retrieval of friends of an user
+		1 - counting the number of likes for each user
+		2 - counting the average number of likes per user
+		3 - retrieving of users who have more friends that specific threshold
+		4 - retrieving friend of user's friends
+if the first input parameter is 
+0:
+   It receives four parameters in such order:
+   1) input folder where the initial data can be found - social network graph
+   2) output folder where the result data will be stored 
+   3) name of the user for whom the program will be run
+   4) number of reducers
+1:
+	It receives three parameters in such order:
+ 	1) input folder where the initial data can be found - social network graph
+   	2) output folder where the result data will be stored 
+    3) number of reducers
+2:
+   	It receives four parameters in such order:
+ 	1) input folder where the initial data can be found - social network graph
+ 	2) temporary folder where the result file of the first task which will be used as a input file of
+ 	the second task will be stored
+   	3) output folder where the result data will be stored 
+    4) number of reducers
+3:
+    It receives four parameters in such order:
+    1) input folder where the initial data can be found - social network graph
+    2) output folder where the result data will be stored 
+    3) popularity threshold by which the result users will be selected.
+    4) number of reducers
+4:
+    it receives five parameters in this order:
+    1) input folder where the initial data can be found - social network graph
+    2) input folder where the initial data can be found - social network graph
+    !!! We have two input directories, two input files which are read from the mappers initially.
+    3) temporary directory that will store the output file of the first task
+    4) output directory which will store the final output
+    5) number of reducers
+    
+For example, for invocation of map/reduce task for 
+- retrieval of user's friends 
+	hadoop jar mapreduce-apps-1.2.jar 0 <input folder> <output folder> <user> <num reducer>
+- counting the number of likes for each user
+	hadoop jar mapreduce-apps-1.2.jar 1 <input folder> <output folder> <num reducer>
+- counting the average number of likes per user 
+	hadoop jar mapreduce-apps-1.2.jar 2 <input folder> <temp folder> <output folder> <num reducer>
+- retrieving of users who have more friends that specific threshold
+	hadoop jar mapreduce-apps-1.2.jar 3 <input folder> <temp folder> <output folder> <popularity> <num reducer>
+- retrieving friend of user's friends
+	hadoop jar mapreduce-apps-1.2.jar 4 <first input folder> <second input folder> <temp folder> <output folder>s <num reducer>
+	
+

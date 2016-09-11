@@ -1,0 +1,20 @@
+Joins which are performed by Reducer are treated as Reduce-side joins. On the other hand, joins 
+performed by Mappper are called Map-side joins.
+
+	- Reduce-side Join:
+	For the reduce-side join we rely on the shuffling phase and that the entries with the same key will reach 
+	the same reducer. So, if the mappers (one for each table included in the join) omit the date entries
+	by the join attribute, in the shuffle phase these entries will be combined by their key and will end up in 
+	the same reducer. The reducer will have the task only to generate the combination of them.
+	- Map-side Joins: 
+	The idea of a map-side join is to perform all join operations on the mapper.
+	But some sonditions are necessary, since all join-relevant data for both sides needs to be
+	at the same mapper instance:
+	– All data sets need to be sorted the same way
+	– All data sets need to be partitioned on the same key
+	– Number of partitions for all data sets need to be the same
+
+- Pros/Cons
+Map-side joins have their constrains because of the requirements that should be meet, while reduce-side joins can be
+applied on any kind of workload. In turn, map-side joins are more efficient, since they can avoid the
+costly shuffle phase.

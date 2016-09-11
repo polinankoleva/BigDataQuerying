@@ -1,0 +1,29 @@
+EX1 - ex1.pig
+	
+	This program takes four parameters:
+	1) rdfStorageJar - the path leading to rdfStorage.jar
+	2) udfJar - the path leading to a jar with user-defined functions (udf.jar)
+	3) input - input file from where social graph is loaded
+	4) output - folder where the result is written
+	
+	EXECUTION COMMAND:
+	pig -x local|mapreduce -param input=<input file path> 
+	-param output=<output folder> -param rdfStorageJar=<rdfStorage.jar  path>  
+	-param udfJar=<udf.jar  path> ex1.pig
+
+EX2 - ex2.pig
+	
+	This program takes six parameters:
+	1) rdfStorageJar - the path leading to rdfStorage.jar
+	2) udfJar - the path leading to a jar with user-defined functions (udf.jar)
+	3) userId - a user whose friends' birthdays will be taken into account
+	4) referenceDate - the start of a period (two weeks) in which birthdays will be searched.
+	Its format is 'year-month-day'
+	5) input - input file from where social graph is loaded
+	6) output - folder where the result is written
+	
+	EXECUTION COMMAND:
+	pig -x local|mapreduce -param input=<input file path> 
+	-param output=<output folder> -param rdfStorage=<rdfStorage.jar  path> 
+	-param udfJar=<udf.jar> -param userId=<userId>
+	-param referenceDate=<year-month-date> ex2.pig 

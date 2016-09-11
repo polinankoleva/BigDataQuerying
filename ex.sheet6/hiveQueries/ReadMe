@@ -1,0 +1,37 @@
+ex.1
+
+This task takes two paramaters:
+1) START_DATE - when a period whitin posts will be searched for starts
+2) END_DATE - when a period whitin posts will be searched for ends
+
+EXECUTION:
+hive -hiveconf START_DATE=<YYYY-MM-DD> -hiveconf END_DATE=<YYYY-MM-DD> -f ex1.hql
+ 
+ex2.
+
+This task takes three paramaters:
+1) START_DATE - when a period whitin posts will be searched for starts
+2) END_DATE - when a period whitin posts will be searched for ends
+3) EVENT_NAME - name of an event for which will be searched
+
+EXECUTION:
+hive -hiveconf START_DATE=<YYYY-MM-DD> -hiveconf END_DATE=<YYYY-MM-DD> -hiveconf EVENT_NAME=<eventName> -f ex2.hql 
+
+ex3.
+
+This task takes two paramaters:
+1) START_DATE - when a period whitin posts will be searched for starts
+2) END_DATE - when a period whitin posts will be searched for ends
+
+EXECUTION:
+hive -hiveconf START_DATE=<YYYY-MM-DD> -hiveconf END_DATE=<YYYY-MM-DD> -f ex3.hql
+
+ex4.
+
+This tasks takes one paramater:
+1) GROUP_NAME - name/identifier of a group for which suggested new members will be selected
+
+EXECUTION
+hive -hiveconf GROUP_NAME=<groupId> -f ex4.hql
+
+

@@ -1,0 +1,16 @@
+EX5 - ex5.pig
+	
+	This program takes three parameters:
+	1) rdfStorageJar - the path leading to rdfStorage.jar
+	2) input - path to the input file from where social graph is loaded
+	3) output - path to the folder where the result is written
+	
+	EXECUTION COMMAND:
+	pig -x local|mapreduce -param input=<input file path> 
+	-param output=<output folder> -param rdfStorageJar=<rdfStorage.jar  path> ex5.pig
+	
+EX5 b)
+I decided to use Pig because it gives me more flexibility. We have multiple things to compute, so
+I can just compute them separately and after used them for sorting or computing a field of a final result.
+If Hive was used, this would lead to multiple subqueries which will be hard to understand. If MapReduce was 
+used, this would lead to multiple map-reduce phases and a lot of code.
